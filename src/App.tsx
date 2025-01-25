@@ -63,7 +63,7 @@ function App() {
             alt="Mid Mountains"
             className="parallax-layer layer-3"
           />
-          <img src="public\dron.png" alt="Drone" className="moon-img" />
+          <img src="dron.png" alt="Drone" className="moon-img" />
           <div className="hero-text">
             <h1 className="hero-title">Drone & IOT Club</h1>
             <a href="#explore" className="explore-btn">
