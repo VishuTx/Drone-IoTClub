@@ -1,0 +1,130 @@
+/* Main Section */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1a202c; /* Dark background */
+  }
+  
+  .parallax-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Layers */
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .layer-1 {
+    background: url("stars.png") no-repeat center center/cover;
+    z-index: 1;
+  }
+  
+  .layer-2 {
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  .layer-3 {
+    z-index: 3;
+    opacity: 0.8;
+  }
+  
+ 
+  /* Hero Text */
+  .hero-text {
+    position: absolute;
+    z-index: 5;
+    top: 60%; /* Adjust to center the text properly under the drone */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-family: "Arial", sans-serif; /* Optional font styling */
+  }
+  .hero-title {
+    font-size: 3rem; /* Larger font size for the title */
+    margin-bottom: 1.5rem;
+  }
+  
+  .explore-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    background-color: #357ab8;
+    transform: scale(1.05);
+  }
+  /* Fade Out on Scroll */
+  .fade-out {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .drone-img {
+      width: 80px; /* Smaller size for smaller screens */
+      top: 25%;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .explore-btn {
+      font-size: 1rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .drone-img {
+      width: 60px;
+    }
+  
+    .hero-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+   
+  
+  /* Optional: Add hover animation for the drone */
+  /* .drone-img:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  } */
+  
+  
+  /* Add classes for different sizes */
+  .drone-small {
+    width: 120px; /* Adjust smaller size */
+  }
+  
+  .drone-medium {
+    width: 10px; /* Original size */
+  }
+  
+  .drone-large {
+    width: 200px; /* Adjust larger size */
+  }
+  
+  

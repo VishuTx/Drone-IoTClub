@@ -5,6 +5,11 @@ import Navbar from "./components/Navbar.tsx";
 import Faculty from "./components/Faculty.tsx";
 import ParallaxImage from "./components/ParallaxImage.tsx";
 import SideBySideContainers from "./components/SideBySideContainers.tsx"
+import { BlurFadeDemo } from "./components/BlurFadeDemo.tsx";
+import Carousel from "./components/Carousel.tsx";
+import ScrollingList from "./components/ScrollingList.tsx";
+import ParallaxSection from "./components/ParallaxSection.tsx";
+
 
 function App() {
   useEffect(() => {
@@ -42,7 +47,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1c0522]">
+    <div className="min-h-screen bg-[#000000]">
       <Navbar />
 
       {/* Parallax Hero Section */}
@@ -65,13 +70,14 @@ function App() {
           />
           <img src="dron.png" alt="Drone" className="moon-img" />
           <div className="hero-text">
-            <h1 className="hero-title">Drone & IOT Club</h1>
+            <h1 className="hero-title">DRONE & IOT CLUB</h1>
             <a href="#explore" className="explore-btn">
               Explore Now
             </a>
           </div>
         </div>
       </section>
+      {/* <ParallaxSection/> */}
 
       
 
@@ -122,78 +128,30 @@ function App() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-8">
   {/* Outer grid container for two columns */}
-  <div className="grid md:grid-cols-2 gap-8">
-    {/* Left Column */}
-    <div className="flex items-center justify-center w-full">
-      {/* Inner container for the news card */}
-      <div className="space-y-8 w-full">
-        {/* News card */}
-        <div className="news-card">
-          <h3 className="text-2xl font-bold mb-4 text-white">Latest News</h3>
-          {/* List of news items */}
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                SWIFTWINGS'24 from 12th to 14th December 2024
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                National Conference on AI
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                Guest Lecture on 5G Networks
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                Hackathon 2024
-              </a>
-            </li>
-          </ul>
-        </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Left Column - Latest News */}
+    <div className="flex items-center justify-center">
+      <div className="w-full h-full bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-2xl font-bold mb-4">Latest News</h3>
+
+        <ScrollingList/>
+        
       </div>
     </div>
 
-    {/* Right Column */}
-    <div className="flex items-center justify-center w-full">
-      {/* Inner container for the news card */}
-      <div className="space-y-8 w-full">
-        {/* News card */}
-        <div className="news-card">
-          <h3 className="text-2xl font-bold mb-4 text-white">Latest News</h3>
-          {/* List of news items */}
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                SWIFTWINGS'24 from 12th to 14th December 2024
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                National Conference on AI
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                Guest Lecture on 5G Networks
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-purple-300">
-                Hackathon 2024
-              </a>
-            </li>
-          </ul>
-        </div>
+    {/* Right Column - Moments Captured */}
+    <div className="flex items-center justify-center">
+      <div className="w-full h-full bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-2xl font-bold mb-4">Moments Captured</h3>
+        {/* Carousel component */}
+        <Carousel />
       </div>
     </div>
   </div>
 </div>
+
       </section>
 
       <Faculty />
