@@ -54,7 +54,7 @@ const Navbar = () => {
             <li>
               <a
                 href="events.html"
-                className="block px-4 py-2 text-lg text-blue-400 hover:text-blue-300"
+                className="block px-4 py-2 text-lg hover:text-gray-400"
               >
                 Events
               </a>

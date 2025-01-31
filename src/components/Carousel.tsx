@@ -5,7 +5,7 @@ const images = [
   "https://picsum.photos/id/237/800/400",
   "https://picsum.photos/id/238/800/400",
   "https://picsum.photos/id/239/800/400",
-  "https://picsum.photos/id/240/800/400",
+  
 ];
 
 export default function Carousel() {
